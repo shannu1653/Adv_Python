@@ -4,22 +4,22 @@
 
 #same object
 
-# class Person:
-#     name='shannu'
-#     age=24
-#     gender='male'
-# obj1=Person()
-# obj2=Person()
-# print(obj1)
-# print(obj2)
-# print(obj1.name)
-# print(obj2.name)
+class Person:
+    name='shannu'
+    age=24
+    gender='male'
+obj1=Person()
+obj2=Person()
+print(obj1)
+print(obj2)
+print(obj1.name)
+print(obj2.name)
 
-# #updating value in obj1
-# obj1.name="shannu penta"
-# print(obj1.name)#reflecting only in obj1
-# print(obj2.name)#does not refecting to ojject2
-# print(Person().name)#does not  reflcet to persion class also
+#updating value in obj1
+obj1.name="shannu penta"
+print(obj1.name)#reflecting only in obj1
+print(obj2.name)#does not refecting to ojject2
+print(Person().name)#does not  reflcet to persion class also
 
 # class Person:
 #     def __init__(self,name,age,gender):
@@ -66,19 +66,19 @@
 # insta.purpose
 
 
-#dynamic
-class Application:
-    def __init__(app,name,purpose1,logocolor):
-        app.name=name
-        app.purpose1=purpose1
-        app.logocolor=logocolor
-    def purpose(self,app_name,purpose):
-        print(f"{app_name} is used for {purpose}")
-insta=Application("instagram","social Media","pink")
-print(insta.name,insta.purpose1,insta.logocolor)
-insta.purpose("instagram","social Media")
-#for youtube
-youtube=Application("Facebook","entertainment","blue")
-youtube.purpose("youtube","reels")
-print(youtube.name,youtube.purpose1,youtube.logocolor)
+# #dynamic
+# class Application:
+#     def __init__(app,name,purpose1,logocolor):
+#         app.name=name
+#         app.purpose1=purpose1
+#         app.logocolor=logocolor
+#     def purpose(self,app_name,purpose):
+#         print(f"{app_name} is used for {purpose}")
+# insta=Application("instagram","social Media","pink")
+# print(insta.name,insta.purpose1,insta.logocolor)
+# insta.purpose("instagram","social Media")
+# #for youtube
+# youtube=Application("Facebook","entertainment","blue")
+# youtube.purpose("youtube","reels")
+# print(youtube.name,youtube.purpose1,youtube.logocolor)
 

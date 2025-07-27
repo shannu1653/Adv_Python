@@ -15,3 +15,20 @@ print(instructor_1.followers)
 instructor_2=Instructor('shannu','ram')
 instructor_2.updated_followers('rama')
 print(instructor_2.followers)
+
+#area and circumeference of a circle
+class Circle:
+    pi=3.14
+    def __init__(self,radius=4):
+       self.radius=radius
+       self.area=Circle.pi * radius*radius
+    # def area(self):
+    #     return (f"{self.pi*self.radius**2}")
+    def cicumference(self):
+        return (f"{2*Circle.pi*self.radius}")
+# area_1=Circle(5)
+cicumeference_1=Circle(4)
+# print(area_1.area())
+print(cicumeference_1.cicumference())
+area_1=Circle()
+print(area_1.area)

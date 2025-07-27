@@ -32,3 +32,15 @@ cicumeference_1=Circle(4)
 print(cicumeference_1.cicumference())
 area_1=Circle()
 print(area_1.area)
+
+for i in range(1,4):
+    for j in range(1 ,i+1):
+        if (i+j)%2==0:
+            print("*",end=" ")
+            print()
+        
+        else:
+            print("#",end=" ")
+            print()
+        
+

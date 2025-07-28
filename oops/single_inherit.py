@@ -30,6 +30,8 @@ class User:
     def __init__(self,name,email):
         self.name=name
         self.email=email
+    def Method(self):
+        print('All the Best u can do it please try it one\ce')
 class Student(User):
     def __init__(self, name, email,enrolledcourses):
         super().__init__(name, email)
@@ -43,13 +45,24 @@ class Student(User):
         self.enrolledcourses.append(course)
         self.getCourses()
 
-# class Trainer(User):
-#     def __init__(self,name,email,courses_training):
+class Trainer(User):
+    def __init__(self,name,email,courses_training):
+        super().__init__(name,email)
+        self.courser_training=courses_training
+    def Courses(self):
+        print(f"{self.name} is trainer to {self.courser_training} ")
+    def removecourse(self,coursename):
+        self.courser_training.remove(coursename)
+        self.Courses()
+        super().Method()
+
 student_object=Student("shanmukha","shanmukha@gmail.com",['html','python','js'])
 student_object.getCourses()
 student_object.removeCourses('html')
 student_object.addCourses('sql')
-
+Trainer_object=Trainer('shannu',"shannu@gmail.com",['python','html','frontend'])
+Trainer_object.Courses()
+Trainer_object.removecourse("python")
 
          
 

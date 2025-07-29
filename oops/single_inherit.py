@@ -92,3 +92,24 @@ male_1=male("shannu",1)
 print(male_1.num_nose)
 male_1.display()
 
+class ParentActor:
+    def __init__(self,name,PWorth):
+        self.pname=name
+        self.Pworth=PWorth
+        print(f"{self.pname} is the parent")
+    def ParentAssets1(self,):
+        print(f"{self.name} assets are {self.Pworth} cr")
+class ChildActor(ParentActor):
+    def __init__(self, Pname,Cname, PWorth):
+        super().__init__(Pname,PWorth)
+        self.Cname=Cname                                                                                                                                                                   
+        print(f"{self.Cname} is came by the reference of {self.pname}")
+    def Childassets(self,worth):
+        self.Cworth=worth
+        print(f"{self.Cname} is having worth of {self.Cworth} cr")
+    def TotalAssets(self):
+        print(f"total assets of {self.Cname} is {self.Pworth+self.Cworth}")
+
+ramcharan=ChildActor("chiranjivi","ramcharan",100)
+ramcharan.Childassets(75)
+ramcharan.TotalAssets()

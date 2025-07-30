@@ -1,13 +1,13 @@
-# #creating a class
-class Instructior:
-    def __init__(self,name,age):
-        self.Fname=name
-        self.Fage=age
-        self.followers=0
-        print(f"my name is {self.Fname}")
-Obj_varaible=Instructior("shannu",27)
-print(Obj_varaible)
-# print (Obj_varaible.followers)
+# # #creating a class
+# class Instructior:
+#     def __init__(self,name,age):
+#         self.Fname=name
+#         self.Fage=age
+#         self.followers=0
+#         print(f"my name is {self.Fname}")
+# Obj_varaible=Instructior("shannu",27)
+# print(Obj_varaible)
+# # print (Obj_varaible.followers)
 
 
 
@@ -63,31 +63,31 @@ print(Obj_varaible)
 # # print(obj_shannu.name,obj_shannu.age,obj_shannu.gender)
 
 
-# # #static        
-# class Application:
-#     def __init__(app,name,purpose1,logocolor):
-#         app.name=name
-#         app.purpose1=purpose1
-#         app.logocolor=logocolor
-#     def purpose(self):
-#         print("socail media is nice")
-# insta=Application("instagram","social Media","pink")
-# print(insta.name,insta.purpose1,insta.logocolor)
-# insta.purpose()
+# #static        
+class Application:
+    def __init__(app,name,purpose1,logocolor):
+        app.name=name
+        app.purpose1=purpose1
+        app.logocolor=logocolor
+    def purpose(self):
+        print("socail media is nice")
+insta=Application("instagram","social Media","pink")
+print(insta.name,insta.purpose1,insta.logocolor)
+insta.purpose()
 
 
-# # #dynamic
-# class Application:
-#     def __init__(app,name,purpose1,logocolor):
-#         app.name=name
-#         app.purpose1=purpose1
-#         app.logocolor=logocolor
-#     def purpose(self,app_name,purpose):
-#         print(f"{app_name} is used for {purpose}")
-# insta=Application("instagram","social Media","pink")
-# print(insta.name,insta.purpose1,insta.logocolor)
-# insta.purpose("instagram","social Media")
-# #for youtube
-# facebook=Application("Facebook","entertainment","red")
-# facebook.purpose("facebook","reels")
-# print(facebook.name,facebook.purpose1,facebook.logocolor)
+# #dynamic
+class Application:
+    def __init__(app,name,purpose1,logocolor):
+        app.name=name
+        app.purpose1=purpose1
+        app.logocolor=logocolor
+    def purpose(self,app_name,purpose):
+        print(f"{app_name} is used for {purpose}")
+insta=Application("instagram","social Media","pink")
+print(insta.name,insta.purpose1,insta.logocolor)
+insta.purpose("instagram","social Media")
+#for youtube
+facebook=Application("Facebook","entertainment","red")
+facebook.purpose("facebook","reels")
+print(facebook.name,facebook.purpose1,facebook.logocolor)

@@ -63,31 +63,46 @@
 # # print(obj_shannu.name,obj_shannu.age,obj_shannu.gender)
 
 
-# #static        
-class Application:
-    def __init__(app,name,purpose1,logocolor):
-        app.name=name
-        app.purpose1=purpose1
-        app.logocolor=logocolor
-    def purpose(self):
-        print("socail media is nice")
-insta=Application("instagram","social Media","pink")
-print(insta.name,insta.purpose1,insta.logocolor)
-insta.purpose()
+# # #static        
+# class Application:
+#     def __init__(app,name,purpose1,logocolor):
+#         app.name=name
+#         app.purpose1=purpose1
+#         app.logocolor=logocolor
+#     def purpose(self):
+#         print("socail media is nice")
+# insta=Application("instagram","social Media","pink")
+# print(insta.name,insta.purpose1,insta.logocolor)
+# insta.purpose()
 
 
-# #dynamic
-class Application:
-    def __init__(app,name,purpose1,logocolor):
-        app.name=name
-        app.purpose1=purpose1
-        app.logocolor=logocolor
-    def purpose(self,app_name,purpose):
-        print(f"{app_name} is used for {purpose}")
-insta=Application("instagram","social Media","pink")
-print(insta.name,insta.purpose1,insta.logocolor)
-insta.purpose("instagram","social Media")
-#for youtube
-facebook=Application("Facebook","entertainment","red")
-facebook.purpose("facebook","reels")
-print(facebook.name,facebook.purpose1,facebook.logocolor)
+# # #dynamic
+# class Application:
+#     def __init__(app,name,purpose1,logocolor):
+#         app.name=name
+#         app.purpose1=purpose1
+#         app.logocolor=logocolor
+#     def purpose(self,app_name,purpose):
+#         print(f"{app_name} is used for {purpose}")
+# insta=Application("instagram","social Media","pink")
+# print(insta.name,insta.purpose1,insta.logocolor)
+# insta.purpose("instagram","social Media")
+# #for youtube
+# facebook=Application("Facebook","entertainment","red")
+# facebook.purpose("facebook","reels")
+# print(facebook.name,facebook.purpose1,facebook.logocolor)
+
+# dict1={"name":"shannu","age":27}
+# dict2={"namee":"navven","age2":27}
+# d={}
+
+# for i in dict1:
+#     d[i]=dict1[i]
+# for i in dict2:
+#     d[i]=dict2[i]
+# print((d))
+
+dict2={"name":"navven","age2":27}
+dict2['name']="shannu"
+del(dict2["age2"])
+print(dict2)

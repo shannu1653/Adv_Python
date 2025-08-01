@@ -11,10 +11,10 @@ class Cycle(Vehicle):
     def speed(self):
         print("cycle speed is 20kmph")
 
-car=Car()
-cycle=Cycle()
-car.speed()
-cycle.speed()
+# car=Car()
+# cycle=Cycle()
+# car.speed()
+# cycle.speed()
 
 
 #method overiding
@@ -36,7 +36,7 @@ d = Dog()
 a.speak()  # Output: Animal makes a sound
 d.speak()  # Output: Dog barks
 
-
+#solution for overriding
 class Bird:
     def fly(self):
         print("Bird can fly")
@@ -54,4 +54,24 @@ p.fly()
 # Bird can fly
 
 
+class Oreder:
+    def __init__(self,customer,order_id):
+        self.customer=customer
+        self.order_id=order_id
+    def deliver(self):
+        print(f"{self.customer} will get his order num {self.order_id} with standard delivery")
+class ExpressOreder(Oreder):
+    def __init__(self, customer, order_id):
+        super().__init__(customer, order_id)
+    def deliver(self):
+        print(f"{self.customer} will get his oreder num {self.order_id} with express delivery")
 
+obj1=Oreder("shannu",123)
+obj1.deliver()
+obj2=Oreder('harish',1223)
+
+obj3=ExpressOreder('naresh','nar24')
+
+print(obj1.__dict__)
+print(obj2.__dict__)
+print(ExpressOreder.mro())#method of resotion oreder --> to check flow of inheritance happeing b/w the classes.

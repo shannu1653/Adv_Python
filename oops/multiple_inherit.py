@@ -93,3 +93,57 @@ print(boy_1.nose)
 print(boy_1.num_heart)
 print(boy_1.language)
 boy_1.display()
+
+
+
+#Example for diamond Problems 
+#solve usind MRO
+class A:
+    def show(self):
+        print("A")
+class B(A):
+    def show(self):
+        print("B")
+        super().show()
+class C(A):
+    def show(self):
+        print("C")
+        super().show()
+class D(C,B):
+    def show(self):
+        print("D")
+        super().show()
+obj=D()
+obj.show()
+
+
+#i want to call both parents
+#✅ Option 1: Explicitly call both parent methods inside Child
+class Father:
+    def skills(self):
+        print("Father : knows gardening ")
+
+class Mother:
+    def skills(self):
+        print("Mother : knows cooking")
+class Child(Father,Mother):
+    def skills(self):
+        Father.skills(self)
+        Mother.skills(self)
+    def hobby(self):
+        print("Child : Loves painting")
+c=Child()
+c.skills()
+
+#✅ Option 2: Use super() carefully (only works in diamond inheritance / cooperative classes)
+class Father:
+    def skills(self):
+        print("Father : knows gardening ")
+        super().skills()
+class Mother:
+    def skills(self):
+        print("Mother : knows cooking")
+class Child(Father,Mother):
+    pass
+c=Child()
+c.skills()

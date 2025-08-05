@@ -81,7 +81,7 @@ class Demo:
 obj=Demo()
 print(obj.__dict__)
 print(obj._Demo__name)
-obj.setDetails()
+obj.setDetails.vv()
 print(obj.__dict__)
 print(obj._Demo__name)
 

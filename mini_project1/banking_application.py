@@ -26,6 +26,7 @@ class Bank:
                     break
                 else:
                     print("Deposite 500 rupees.....")
+        
         Bank.total_user.append(user_details)
         print(Bank.total_user)
         print('Your BankAccount Successfully Created')    

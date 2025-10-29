@@ -38,44 +38,44 @@ try:
 except:
     print("table not created")
 
-#5.inserting a single row data
-def insertSingleRow(data):
-    try:
-        insertdata=""" insert into  students (name,email,course,joined_date) values(%s,%s,%s,%s)"""
-        cursor.execute(insertdata,data)
-        print('insert data successfully')
-    except:    
-        print("data not insert in single row")
-insertSingleRow(('shannu','shannu@gamil.com','python','2025-03-02'))
-conn.commit()
+# #5.inserting a single row data
+# def insertSingleRow(data):
+#     try:
+#         insertdata=""" insert into  students (name,email,course,joined_date) values(%s,%s,%s,%s)"""
+#         cursor.execute(insertdata,data)
+#         print('insert data successfully')
+#     except:    
+#         print("data not insert in single row")
+# insertSingleRow(('shannu','shannu@gamil.com','python','2025-03-02'))
+# conn.commit()
 
-#6.# insert multiple rows at a time
-def insertMulRow(data):
-    try:
-        insertdata=""" insert into students (name,email,course,joined_date) values(%s,%s,%s,%s) """
-        cursor.executemany(insertdata,data)
-        print("data inserted multiple rows succefully at one")
-    except Exception as e:
-        print('Error inserting multiple rows:', e)
+# #6.# insert multiple rows at a time
+# def insertMulRow(data):
+#     try:
+#         insertdata=""" insert into students (name,email,course,joined_date) values(%s,%s,%s,%s) """
+#         cursor.executemany(insertdata,data)
+#         print("data inserted multiple rows succefully at one")
+#     except Exception as e:
+#         print('Error inserting multiple rows:', e)
 
-insertMulRow([('naveen','navven@gamil.com','java','2025-03-02'),
-            ('tharun','tharun@gamil.com','ds','2025-03-02'),
-             ('sathish','sathish@gamil.com','python','2025-03-02'),
-             ('sharanya','sharanya@gamil.com','ds','2025-03-02')])
-conn.commit()
+# insertMulRow([('naveen','navven@gamil.com','java','2025-03-02'),
+#             ('tharun','tharun@gamil.com','ds','2025-03-02'),
+#              ('sathish','sathish@gamil.com','python','2025-03-02'),
+#              ('sharanya','sharanya@gamil.com','ds','2025-03-02')])
+# conn.commit()
 
 
-#7.getrecords
-def getrecords():
-    try:
-        qurey='select * from students'
-        cursor.execute(qurey)
-        results=cursor.fetchall()
-        for row in results:
-            print(row)
-    except:
-        print('error occured')
-getrecords()
+# #7.getrecords
+# def getrecords():
+#     try:
+#         qurey='select * from students'
+#         cursor.execute(qurey)
+#         results=cursor.fetchall()
+#         for row in results:
+#             print(row)
+#     except:
+#         print('error occured')
+# getrecords()
 
 #8.getstudents by course
 def getStudentByCourse(course_name):
@@ -91,41 +91,94 @@ getStudentByCourse(('python'))
 
 
 #9.updaterecordwithnewemail
-def UpdateRecords(email):
-    try:
-        query2="update students set email=%s where name='tharun'"
-        cursor.execute(query2,(email,))
-        results=cursor.fetchall()
-        for x in results:
-            print(x)
-    except Exception as e:
-        print("Not a updated")
-UpdateRecords("taruni123@gmail.com")
+# def UpdateRecords(email):
+#     try:
+#         query2="update students set email=%s where ='tharun'"
+#         cursor.execute(query2,(email,))
+#         results=cursor.fetchall()
+#         for x in results:
+#             print(x)
+#     except Exception as e:
+#         print("Not a updated")
+# UpdateRecords("taruni123@gmail.com")
 
-#10.deletesinglerecordbyemail
-def getStudentByCourse(email):
-    try:
-        query="""delete from students where email=%s """
-        cursor.execute(query,(email,))
-        results=cursor.fetchall()
-        for x in results:
-            print(x)
-    except Exception as e:
-        print("not delated single row",e)
-getStudentByCourse(('taruni123@gmail.com'))
+########9.updaterecordwithnewemail
+# def UpdateCourseByEmail(course,name):
+#     try:
+#         query2="""update students set course=%s where email=%s"""
+#         cursor.execute(query2,(course,name))
+#         print('data updated succesfully')
+#     except Exception as e:
+#         print("Not a updated")
+# UpdateCourseByEmail("python","navven")
 
-# 10.deletemultipleeecordbyemail
-def delMulRow(course):
-    try:
-        query="""delete from students where course=%s """
-        cursor.execute(query,(course,))
-        results=cursor.fetchall()
-        for x in results:
-            print(x)
-    except Exception as e:
-        print("not delated multiplesingle row",e)
-delMulRow(('ds'))
+#update multiple rcords
+# def UpdateMultipleRecords(new_name,new_course,name):
+#     try:
+#         query2="""update students set name=%s,course=%s where name=%s"""
+#         cursor.execute(query2,(new_name,new_course,name))
+#         print('data updated succesfully')
+#     except Exception as e:
+#         print("Not a updated")
+# UpdateMultipleRecords("shannu","cloud","naveen")
 
-conn.commit()
+
+
+
+# #10.deletesinglerecordbyemail
+# def getStudentByCourse(email):
+#     try:
+#         query="""delete from students where email=%s """
+#         cursor.execute(query,(email,))
+#         print("dalete succefully")
+#         conn.commit()
+
+#         results1=cursor.fetchall()
+#         for i in results1:
+#             print(i)
+#     except Exception as e:
+#         print("not delated single row",e)
+# getStudentByCourse(('tarun@gmail.com'))
+
+# # 10.deletemultipleeecordbyemail
+# def delMulRow(course):
+#     try:
+#         query="""delete from students where course=%s """
+#         cursor.execute(query,(course,))
+#         results=cursor.fetchall()
+#         for x in results:
+#             print(x)
+#     except Exception as e:
+#         print("not delated multiplesingle row",e)
+# delMulRow(('ds'))
+
+
+# def GetLimitedRecords(limit):
+#     try:
+#         query="""select * from students limit %s"""
+#         cursor.execute(query,(limit,))
+#         result=cursor.fetchall()
+#         for x in result:
+#          print(x)
+#     except:
+#         print("some thing went wrong")
+#     finally:
+#         print("task completed")
+# GetLimitedRecords(5)
+
+
+# def GetLimitedRecords(limit):
+#     try:
+#         query="""select * from students order by name asc limit %s"""
+#         cursor.execute(query,(limit,))
+#         result=cursor.fetchall()
+#         for x in result:
+#          print(x)
+#     except:
+#         print("some thing went wrong")
+#     finally:
+#         print("task completed")
+# GetLimitedRecords(5)
+
 cursor.close()
 conn.close()

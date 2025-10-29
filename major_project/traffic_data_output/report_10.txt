@@ -1,0 +1,25 @@
+TRAFFIC MANAGEMENT SYSTEM REPORT
+Generated on: 2025-10-29 20:29:11
+
+CURRENT TRAFFIC CONDITIONS
+=========================
+  Intersection  Vehicles  Avg Speed (km/h) Congestion  Wait Time (s)  Pedestrians Emergency
+Intersection-1         5                41        Low              7           17        NO
+Intersection-2         5                39        Low             27           14        NO
+Intersection-3         1                38        Low             27           13        NO
+Intersection-4        19                52     Medium             31            1        NO
+
+TRAFFIC LIGHT STATUS
+===================
+  Intersection North East  South   West
+Intersection-1   Red  Red Yellow  Green
+Intersection-2 Green  Red    Red Yellow
+Intersection-3 Green  Red    Red Yellow
+Intersection-4   Red  Red Yellow  Green
+
+TRAFFIC ANALYSIS
+===============
+Average Congestion Level: 1.85/3.00
+Total Vehicle Count: 545
+Average Wait Time: 55.29 seconds
+Average Speed: 35.46 km/h

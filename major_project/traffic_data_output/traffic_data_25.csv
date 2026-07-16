@@ -1,0 +1,5 @@
+Intersection,Vehicles,Avg Speed (km/h),Congestion,Wait Time (s),Pedestrians,Emergency
+Intersection-1,22,37,Medium,62,0,NO
+Intersection-2,38,37,High,117,9,NO
+Intersection-3,0,45,Low,32,0,NO
+Intersection-4,44,43,High,106,0,NO

@@ -9,34 +9,36 @@ from db import info
 #first conection established
 try:
     conn=mysql.connector.connect(**info)
+    print(conn.is_connected())
     print("connection established")
 except:
     print('not able to connect')
 cursor=conn.cursor()
 
-#2.Create database
-try:
-    query='create database if not exists 1000coders_new2'
-    cursor.execute(query)
-    print('create database')
-except:
-    print('something wentwrong')
 
-#3.use database
-try:
-    cursor.execute('use 1000coders_new1')
-    print("now database is 10kcoders")
-except:
-    print('something went wrong')
+# #2.Create database
+# try:
+#     query='create database if not exists 1000coders_new2'
+#     cursor.execute(query)
+#     print('create database')
+# except:
+#     print('something wentwrong')
 
-#4.creating a table with id,name,email,course,joined_date
-try:
-    create_table="""create table if not exists students(
-    id int auto_increment primary key,name varchar(30),email varchar(22),course varchar(10),joined_date date) """
-    cursor.execute(create_table)
-    print("Table create successfully")
-except:
-    print("table not created")
+# #3.use database
+# try:
+#     cursor.execute('use 1000coders_new1')
+#     print("now database is 10kcoders")
+# except:
+#     print('something went wrong')
+
+# #4.creating a table with id,name,email,course,joined_date
+# try:
+#     create_table="""create table if not exists students(
+#     id int auto_increment primary key,name varchar(30),email varchar(22),course varchar(10),joined_date date) """
+#     cursor.execute(create_table)
+#     print("Table create successfully")
+# except:
+#     print("table not created")
 
 # #5.inserting a single row data
 # def insertSingleRow(data):
@@ -77,17 +79,17 @@ except:
 #         print('error occured')
 # getrecords()
 
-#8.getstudents by course
-def getStudentByCourse(course_name):
-    try:
-        query="""select * from students where course=%s """
-        cursor.execute(query,(course_name,))
-        results=cursor.fetchall()
-        for x in results:
-            print(x)
-    except Exception as e:
-        print("something went wrong",e)
-getStudentByCourse(('python'))
+# #8.getstudents by course
+# def getStudentByCourse(course_name):
+#     try:
+#         query="""select * from students where course=%s """
+#         cursor.execute(query,(course_name,))
+#         results=cursor.fetchall()
+#         for x in results:
+#             print(x)
+#     except Exception as e:
+#         print("something went wrong",e)
+# getStudentByCourse(('python'))
 
 
 #9.updaterecordwithnewemail
@@ -180,5 +182,5 @@ getStudentByCourse(('python'))
 #         print("task completed")
 # GetLimitedRecords(5)
 
-cursor.close()
-conn.close()
+# cursor.close()
+# conn.close()

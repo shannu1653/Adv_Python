@@ -16,32 +16,32 @@ cursor=conn.cursor()
 # except:
 #     print('database not created')
 
-##2.use database
-try:
-    query="""use instadata"""
-    cursor.execute(query)
-    print('now data in database')
-except:
-    print('error occured')
+# ##2.use database
+# try:
+#     query="""use instadata"""
+#     cursor.execute(query)
+#     print('now data in database')
+# except:
+#     print('error occured')
 
 
-# #3.create table
-try:
-    create_table = """
-    CREATE TABLE IF NOT EXISTS data (
-        userno INT AUTO_INCREMENT PRIMARY KEY,
-        userid INT UNIQUE,
-        username VARCHAR(100),
-        password VARCHAR(100),
-        likes BIGINT,
-        followers BIGINT,
-        comments BIGINT
-    )
-    """
-    cursor.execute(create_table)
-    print("Table successfully created")
-except Exception as e:
-    print("Table not created:", e)
+# # #3.create table
+# try:
+#     create_table = """
+#     CREATE TABLE IF NOT EXISTS data (
+#         userno INT AUTO_INCREMENT PRIMARY KEY,
+#         userid INT UNIQUE,
+#         username VARCHAR(100),
+#         password VARCHAR(100),
+#         likes BIGINT,
+#         followers BIGINT,
+#         comments BIGINT
+#     )
+#     """
+#     cursor.execute(create_table)
+#     print("Table successfully created")
+# except Exception as e:
+#     print("Table not created:", e)
 
 
 # query="""alter table data add  views bigint"""

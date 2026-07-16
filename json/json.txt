@@ -1,0 +1,10 @@
+json--java script object notation
+it is text formating(in strings) fro data interchange between the systems
+
+{
+    'key':'value'
+    'details':"[{"key" : "value"}]
+}
+
+security and reliability
+

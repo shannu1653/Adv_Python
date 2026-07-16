@@ -1,0 +1,40 @@
+SMART TRAFFIC MANAGEMENT SYSTEM - FINAL SUMMARY
+=============================================
+
+Report Generated: 2026-01-21 16:46:03
+Simulation Duration: 140 seconds
+Intersections Monitored: 4
+
+TRAFFIC PERFORMANCE METRICS
+==========================
+Average Vehicle Count per Intersection: 25.51
+Average Speed: 38.49 km/h
+Average Wait Time: 85.81 seconds
+
+CONGESTION DISTRIBUTION
+======================
+High: 57.86%
+Medium: 21.43%
+Low: 20.71%
+
+EMERGENCY VEHICLE RESPONSES
+==========================
+Intersection-1: 0 emergency events
+Intersection-2: 0 emergency events
+Intersection-3: 0 emergency events
+Intersection-4: 0 emergency events
+
+INTERSECTION PERFORMANCE RANKING
+==============================
+1. Intersection-3 - Score: 1.06 (Avg Congestion: 1.17, Avg Speed: 39.89 km/h, Avg Wait: 30.71s)
+2. Intersection-1 - Score: 1.85 (Avg Congestion: 2.37, Avg Speed: 32.26 km/h, Avg Wait: 79.80s)
+3. Intersection-4 - Score: 2.08 (Avg Congestion: 3.00, Avg Speed: 49.71 km/h, Avg Wait: 122.00s)
+4. Intersection-2 - Score: 2.22 (Avg Congestion: 2.94, Avg Speed: 32.11 km/h, Avg Wait: 110.71s)
+
+SYSTEM RECOMMENDATIONS
+======================
+- Optimize traffic light timing to reduce high average wait times
+- Implement traffic diversion strategies to reduce overall congestion
+- Focus immediate attention on Intersection-4 which shows critical congestion levels
+- Consider dynamic lane allocation during peak congestion periods
+- Evaluate emergency response protocols which successfully handled 0 emergency vehicle events
